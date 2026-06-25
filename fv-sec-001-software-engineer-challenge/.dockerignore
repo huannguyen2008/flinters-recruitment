@@ -1,0 +1,11 @@
+.git
+.gitignore
+.idea
+__pycache__
+*.pyc
+.pytest_cache
+ad_data.csv
+ad_data.csv.zip
+results/*.csv
+docs
+*.md

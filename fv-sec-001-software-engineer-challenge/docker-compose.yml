@@ -1,0 +1,29 @@
+services:
+  # Run the aggregator against the real dataset.
+  #   1. unzip ad_data.csv.zip      (produces ad_data.csv in this folder)
+  #   2. docker compose run --rm aggregator
+  # The whole project folder is mounted at /app, so the unzipped ad_data.csv is
+  # picked up automatically and the result CSVs land in ./results on the host.
+  aggregator:
+    build: .
+    volumes:
+      - .:/app
+    command: ["--input", "ad_data.csv", "--output", "results/"]
+
+  # Run the test suite inside the container:
+  #   docker compose run --rm test
+  # The project folder is mounted so tests always run against the current source.
+  test:
+    build: .
+    volumes:
+      - .:/app
+    entrypoint: ["python", "-m", "pytest", "tests/", "-v"]
+
+  # Benchmark the pipeline (time + peak memory). Override --engine / --trials as needed:
+  #   docker compose run --rm benchmark --input ad_data.csv --engine streaming --trials 3
+  benchmark:
+    build: .
+    volumes:
+      - .:/app
+    entrypoint: ["python", "benchmark.py"]
+    command: ["--input", "ad_data.csv", "--engine", "streaming", "--trials", "3"]

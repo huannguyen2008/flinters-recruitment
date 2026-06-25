@@ -1,0 +1,5 @@
+campaign_id,date,impressions,clicks,spend,conversions
+CMP001,2025-01-01,10000,500,100.00,10
+BADROW,2025-01-01,not_a_number,100,50.00,5
+CMP002,2025-01-01,5000,250,75.00,2
+,2025-01-01,8000,400,80.00,8

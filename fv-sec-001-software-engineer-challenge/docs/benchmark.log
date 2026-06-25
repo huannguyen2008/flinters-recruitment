@@ -1,0 +1,47 @@
+============================================================
+Ad Performance Aggregator — Benchmark
+============================================================
+Timestamp     : 2026-06-25 15:12:30
+Platform      : Linux-6.12.72-linuxkit-aarch64-with-glibc2.41
+Python        : 3.11.15
+Polars        : 1.42.0
+CPU cores      : 12
+Input file    : ad_data.csv (995 MB)
+Engine        : streaming
+Trials        : 3
+------------------------------------------------------------
+  trial 1:  0.992 s
+  trial 2:  0.908 s
+  trial 3:  0.886 s
+------------------------------------------------------------
+Campaigns     : 50
+Min time      : 0.886 s
+Mean time     : 0.929 s
+Stdev         : 0.056 s
+Throughput    : 1123 MB/s (best trial)
+Peak RSS      : 1843 MB
+============================================================
+
+============================================================
+Ad Performance Aggregator — Benchmark
+============================================================
+Timestamp     : 2026-06-25 15:12:34
+Platform      : Linux-6.12.72-linuxkit-aarch64-with-glibc2.41
+Python        : 3.11.15
+Polars        : 1.42.0
+CPU cores      : 12
+Input file    : ad_data.csv (995 MB)
+Engine        : in-memory
+Trials        : 3
+------------------------------------------------------------
+  trial 1:  0.966 s
+  trial 2:  1.082 s
+  trial 3:  0.968 s
+------------------------------------------------------------
+Campaigns     : 50
+Min time      : 0.966 s
+Mean time     : 1.005 s
+Stdev         : 0.066 s
+Throughput    : 1030 MB/s (best trial)
+Peak RSS      : 2786 MB
+============================================================

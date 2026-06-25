@@ -1,2 +1,12 @@
 generator
+
+# Dataset (downloaded via Git LFS / unzipped locally — too large to commit)
 ad_data.csv
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS
+.DS_Store
